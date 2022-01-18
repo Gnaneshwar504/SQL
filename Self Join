@@ -1,0 +1,7 @@
+SELECT sc1.student_id AS student_id1,
+  sc2.student_id AS student_id2, sc1.course_id
+FROM
+   student_course AS sc1
+   INNER JOIN student_course sc2 ON sc1.course_id = sc2.course_id
+WHERE
+    sc1.student_id < sc2.student_id;
