@@ -1,0 +1,65 @@
+
+Replace average_rating with a query which computes the average.
+
+SELECT
+   name,
+   (
+       SELECT AVG(rating)
+       FROM product
+       WHERE category = "WATCH"
+   ) - rating AS rating_variance
+FROM product
+WHERE category = "WATCH";
+
+
+
+
+Example 3:
+Fetch all the order_ids in which order consists of mobile (product_ids : 291, 292, 293, 294, 296) and not ear phones (product_ids : 227, 228, 229, 232, 233).
+
+
+
+
+
+
+SELECT
+  order_id
+FROM
+  order_details
+WHERE
+  order_id IN (
+    SELECT
+      order_id
+    FROM
+      order_product
+    WHERE
+      product_id IN (291, 292, 293, 294, 296)
+  )
+  AND NOT order_id IN (
+    SELECT
+      order_id
+    FROM
+      order_product
+    WHERE
+      product_id IN (227, 228, 229, 232, 233)
+  );
+  
+  
+  
+  
+  View
+A view can simply be considered as a name to a SQL Query
+
+Create View
+To create a view in the database, use theCREATE VIEWstatement.
+
+Example
+Createuser_base_detailsview with id, name, age, gender and pincode.
+
+
+SELECT
+  name
+FROM
+  sqlite_master
+WHERE
+  TYPE = 'view';
