@@ -1,0 +1,45 @@
+Modelling Databases > Applying ER Model Concepts | Cheat Sheet
+Applying ER Model Concepts
+In the previous cheatsheet, we have understood the core concepts of ER Model — entity types, relationships and attributes. Now, let's build an ER model for a real-world scenario. 
+
+E-commerce Application
+In a typical e-commerce application, 
+
+Customer has only one cart. A cart belongs to only one customer
+Customer can add products to cart
+Cart contains multiple products
+Customer can save multiple addresses in the application for further use like selecting delivery address
+Let’s apply the concepts of ER Model to this e-commerce scenario.
+
+Entity types
+Customer
+Product
+Cart
+Address
+Relationships
+Let's understand the relationships in the e-commerce use-case.
+
+Relation Between Cart and Customer
+
+
+A customer has only one cart.
+A cart is related to only one customer.
+Hence, the relation between customer and cart entities is One-to-One relation.
+Relation Between Cart and Products
+
+A cart can have many products.
+A product can be in many carts.
+Therefore, the relation between cart and product is Many-to-Many relation.
+
+Relation Between Customer and Address
+
+A customer can have multiple addresses.
+An address is related to only one customer.
+Hence, the relation between customer and address is One-to-Many relation.
+
+Attributes
+Following are the attributes for the entity types in the e-commerce scenario. 
+Here, attributes like id, product_id, etc., are key attributes as they uniquely identify each entity in the entity type.
+
+
+ER Model of e-commerce application
