@@ -1,0 +1,9 @@
+SELECT
+  course.name AS course_name,
+  MAX(score) AS highest_score
+FROM
+  course
+  LEFT JOIN student_course 
+ON course.id = student_course.course_id
+GROUP BY
+  course.id;
