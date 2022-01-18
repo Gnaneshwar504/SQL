@@ -1,0 +1,79 @@
+JOINS Cont'd
+Database
+The database stores the data of students, courses, course reviews, instructors, etc., of an e-learning platform.
+
+
+Refer the tables in the code palyground for a better understanding of the database.
+
+RIGHT JOIN
+RIGHT JOIN or RIGHT OUTER JOIN is vice versa of LEFT JOIN.
+I.e., inRIGHT JOIN, for each row in the right table, matched rows from the left table are combined. If there is no match, NULL values are assigned to the left half of the rows in the temporary table.
+
+Syntax
+SQL
+Which is similar to 
+
+SQL
+Example
+Following query performs RIGHT JOIN on course and instructor tables
+
+SQL
+
+Note
+Right Join is not supported in some dbms(SQLite).
+FULL JOIN
+FULL JOIN or FULL OUTER  JOIN is the result of both RIGHT JOIN and LEFT JOIN
+
+Syntax
+SQL
+Example
+Following query performs FULL JOIN ON course and instructor tables
+
+SQL
+
+Note
+FULL JOIN is not supported in some dbms(SQLite).
+CROSS JOIN
+In CROSS JOIN, each row from the first table is combined with all rows in the second table. 
+Cross Join is also called as CARTESIAN JOIN
+
+Syntax
+SQL
+Example
+Following query performs CROSS JOIN on course and instructor tables
+
+SQL
+Output
+course_name	instructor_name
+Machine Learning	Alex
+Machine Learning	Arun
+Machine Learning	Bentlee
+Cyber Security	Alex
+...	...
+
+SELF JOIN
+So far, we have learnt to combine different tables. We can also combine a table with itself. This kind of join is called SELF-JOIN.
+
+Syntax
+SQL
+Note
+We can use any JOIN clause in self-join.
+Example
+Get student pairs who registered for common course.
+
+SQL
+Output
+student_id1	student_id2	course_id
+1	3	11
+JOINS Summary
+Join Type	Use Case
+Natural Join	Joins based on common columns
+Inner Join	Joins based on a given condition
+Left Join	All rows from left table & matched rows from right table
+Right Join	All rows from right table & matched rows from left table
+Full Join	All rows from both the tables
+Cross Join	All possible combinations
+
+MARKED AS COMPLETE
+
+PROCEED TO NEXT
