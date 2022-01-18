@@ -1,0 +1,25 @@
+PRAGMA
+PRAGMA TABLE_INFOcommand returns the information about a specific table in a database.
+
+Example
+Let's find out the information of theemployeetable that's present in the database.
+
+PRAGMA TABLE_INFO(table_name);
+
+PRAGMA TABLE_INFO(employee);
+
+If the given table name does not exist,PRAGMA TABLE_INFOdoesn’t give any result.
+
+CHEAT SHEET
+DISCUSSION
+NOTES
+Introduction to SQL
+We have already learnt that databases and DBMS are key to organising and analysing data for business uses.
+From here on, let’s get busy working around with databases using SQL! 
+
+SQL stands forStructured Query Language
+SQL is used to perform operations on Relational DBMS.
+SQL is declarative. Hence, easy to learn.
+SQL provides multiple clauses (commands) to perform various operations like create, retrieve, update and delete the data.
+
+The first step towards working with the database would be creating a table.
